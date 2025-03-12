@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SMKN 4 Bandar Lampung</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <style>
+      .navbar {
+        transition: all 0.3s ease;
+        background-color: transparent;
+      }
+      .navbar.scrolled {
+        background-color: #212529 !important;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+      .navbar.scrolled .nav-link,
+      .navbar.scrolled .navbar-brand {
+        color: rgb(255, 255, 255) !important;
+      }
+
+      .hero {
+        background-color: #f8f9fa;
+        padding: 60px 0;
+      }
+      .hero img {
+        border-radius: 15px;
+        max-width: 100%;
+        height: auto;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+      }
+
+      .news-card {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+      }
+      .news-card img {
+        height: 200px;
+        object-fit: cover;
+      }
+      .news-card .card-body {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+      }
+      .news-card .btn {
+        margin-top: auto;
+      }
+      .card {
+        min-height: 100%;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+      }
+      .card-img-top {
+        height: 200px;
+        object-fit: cover;
+      }
+      .card-body {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+      }
+      .card-body .btn {
+        margin-top: auto;
+      }
+
+      .footer {
+        color: #fff;
+        padding: 40px 0;
+      }
+      .footer a {
+        color: #fff;
+        text-decoration: none;
+      }
+      .footer a:hover {
+        color: #f8d210;
+      }
+      .footer .social-icons a {
+        font-size: 20px;
+        margin: 0 10px;
+        transition: color 0.3s;
+      }
+      .footer .social-icons a:hover {
+        color: #f8d210;
+      }
+      .footer-logo {
+        max-width: 70px;
+        display: inline-block;
+        margin-right: 10px;
+      }
+      .footer hr {
+        border-color: rgba(255, 255, 255, 0.2);
+      }
+      .contact-info p {
+        margin-bottom: 5px;
+      }
+      .social-icons {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        margin-top: 10px;
+      }
+      .social-icons i {
+        font-size: 18px;
+      }
+      .map-container {
+        max-width: 100%;
+        height: 200px;
+        border-radius: 8px;
+        overflow: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top" id="mainNavbar">
+      <div class="container-xl">
+        <a class="navbar-brand text-light" href="#">
+          <img
+            src="img/logosmk4.png"
+            alt="Logo"
+            width="37"
+            height="28"
+            class="mx-2 d-inline-block align-text-top"
+          />
+          SMKN 4 Bandar Lampung
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active text-light" href="index.html"
+                >Beranda</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active text-light" href="ppdb.html"
+                >PPDB</a
+              >
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle text-light"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+                >Profil Sekolah
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="visi-misi.html">Visi misi</a>
+                </li>
+                <li><a class="dropdown-item" href="#">Sejarah</a></li>
+              </ul>
+            </li>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Navbar -->
+
+    <!-- Jumbotron -->
+    <div
+      id="carouselExampleIndicators"
+      class="carousel slide bg-dark carousel-fade"
+    >
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide-to="0"
+          class="active"
+          aria-current="true"
+          aria-label="Slide 1"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide-to="1"
+          aria-label="Slide 2"
+        ></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img
+            src="img/jumbotron1.jpg"
+            class="d-block w-100 opacity-25"
+            style="height: 80vh"
+            alt="..."
+          />
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Selamat datang di laman SMKN 4 Bandar Lampung</h5>
+            <p>
+              Laman ini berisikan informasi detail mengenai SMKN 4 Bandar
+              Lampung.
+            </p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img
+            src="img/jumbotron2.jpg"
+            class="d-block w-100 opacity-25"
+            style="height: 80vh"
+            alt="..."
+          />
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Selamat datang di web SMKN 4 Bandar Lampung</h5>
+            <p>
+              Web ini berisikan informasi detail mengenai SMKN 4 Bandar Lampung.
+            </p>
+          </div>
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <!-- Jumbotron -->
+
+    <!-- Hero -->
+    <section class="hero d-flex align-items-center">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-6">
+            <h1 class="fw-bold">Selamat Datang Di SMKN 4 Bandar Lampung</h1>
+            <p>
+              SMKN 4 Bandar Lampung adalah sebuah sekolah menengah kejuruan di
+              Kota Bandar Lampung terakreditasi A.
+            </p>
+            <a href="#" class="btn btn-primary btn-lg">Baca Selengkapnya →</a>
+          </div>
+          <div class="col-md-6">
+            <img src="img/hero.jpg" alt="Foto Sekolah" class="img-fluid" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Hero -->
+
+    <!-- Jurusan -->
+    <section class="py-1 bg-dark text-light">
+      <div class="container text-center">
+        <h2 class="fw-bold mb-4 mt-3 opacity-75">Jurusan</h2>
+        <div class="swiper mySwiper mb-2">
+          <div class="swiper-wrapper opacity-50">
+            <div class="swiper-slide text-center p-2">
+              <i class="fas fa-network-wired fa-2x my-3"></i>
+              <p>TKJ</p>
+            </div>
+            <div class="swiper-slide text-center p-2">
+              <i class="fas fa-laptop-code fa-2x my-3"></i>
+              <p>RPL</p>
+            </div>
+            <div class="swiper-slide text-center p-2">
+              <i class="fas fa-paint-brush fa-2x my-3"></i>
+              <p>DKV</p>
+            </div>
+            <div class="swiper-slide text-center p-2">
+              <i class="fas fa-calculator fa-2x my-3"></i>
+              <p>Akuntansi</p>
+            </div>
+            <div class="swiper-slide text-center p-2">
+              <i class="fas fa-briefcase fa-2x my-3"></i>
+              <p>Manajemen Perkantoran</p>
+            </div>
+            <div class="swiper-slide text-center p-2">
+              <i class="fas fa-hotel fa-2x my-3"></i>
+              <p>Perhotelan</p>
+            </div>
+            <div class="swiper-slide text-center p-2">
+              <i class="fas fa-store fa-2x my-3"></i>
+              <p>Bisnis Ritel</p>
+            </div>
+            <div class="swiper-slide text-center p-2">
+              <i class="fas fa-plane fa-2x my-3"></i>
+              <p>UPW</p>
+            </div>
+            <div class="swiper-slide text-center p-2">
+              <i class="fas fa-utensils fa-2x my-3"></i>
+              <p>Tata Boga</p>
+            </div>
+            <div class="swiper-slide text-center p-2">
+              <i class="fas fa-tshirt fa-2x my-3"></i>
+              <p>Tata Busana</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Jurusan -->
+
+    <!-- Berita -->
+    <section class="py-5 bg-light text-dark">
+      <div class="container">
+        <h2 class="fw-bold text-center mb-5">Berita Terbaru</h2>
+        <div class="row">
+          <!-- Berita 1 -->
+          <div class="col-md-4 mb-4">
+            <div class="card rounded">
+              <img src="img/berita1.jpg" class="card-img-top" alt="Berita 1" />
+              <div class="card-body">
+                <h5 class="card-title">Judul Berita 1</h5>
+                <p class="card-text">
+                  Deskripsi singkat tentang berita ini yang memberikan gambaran
+                  awal.
+                </p>
+                <a href="#" class="btn btn-primary">Baca Selengkapnya</a>
+              </div>
+            </div>
+          </div>
+          <!-- Berita 2 -->
+          <div class="col-md-4 mb-4">
+            <div class="card rounded">
+              <img src="img/berita2.png" class="card-img-top" alt="Berita 2" />
+              <div class="card-body">
+                <h5 class="card-title">Judul Berita 2</h5>
+                <p class="card-text">
+                  Deskripsi singkat tentang berita ini yang memberikan gambaran
+                  awal.
+                </p>
+                <a href="#" class="btn btn-primary">Baca Selengkapnya</a>
+              </div>
+            </div>
+          </div>
+          <!-- Berita 3 -->
+          <div class="col-md-4 mb-4">
+            <div class="card rounded">
+              <img src="img/berita3.jpg" class="card-img-top" alt="Berita 3" />
+              <div class="card-body">
+                <h5 class="card-title">Judul Berita 3</h5>
+                <p class="card-text">
+                  Deskripsi singkat tentang berita ini yang memberikan gambaran
+                  awal.
+                </p>
+                <a href="#" class="btn btn-primary">Baca Selengkapnya</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Berita -->
+
+    <!-- Footer -->
+    <footer class="footer bg-dark">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="d-flex align-items-center">
+              <img
+                src="img/logosmk4.png"
+                alt="Logo Sekolah"
+                class="footer-logo"
+              />
+              <h5 class="fw-bold">
+                SMK Negeri 4 <br />
+                Bandar Lampung
+              </h5>
+            </div>
+            <div class="contact-info mt-2">
+              <p>
+                Jl. Hos Cokroaminoto No.102, Enggal, Engal, Kota Bandar Lampung,
+                Lampung 35118
+              </p>
+              <p><i class="fas fa-phone"></i> 0721-261637</p>
+              <p><i class="fas fa-envelope"></i> smkn4bl@yahoo.co.id</p>
+            </div>
+            <hr
+              class="mt-2 mb-2"
+              style="width: 50px; border: 1px solid white"
+            />
+            <div class="social-icons">
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-facebook"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <h5 class="fw-bold">Lokasi</h5>
+            <div class="map-container">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31728.74420673691!2d105.262432!3d-5.423698!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e40db188a082ed5%3A0xa73c4cf727653996!2sSMK%20Negeri%204%20Bandar%20Lampung!5e0!3m2!1sid!2sid!4v1709412345678!5m2!1sid!2sid"
+                width="100%"
+                height="100%"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+              >
+              </iframe>
+            </div>
+          </div>
+        </div>
+        <hr class="mt-4" />
+        <div class="text-center">
+          <small
+            >2025 &copy; <a href="#">SMKN 4 Bandar Lampung</a> All Rights
+            Reserved</small
+          >
+        </div>
+      </div>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 3,
+        spaceBetween: 5,
+        loop: true,
+        autoplay: {
+          delay: 4000,
+          disableOnInteraction: false,
+        },
+        breakpoints: {
+          640: { slidesPerView: 3 },
+          768: { slidesPerView: 4 },
+          1024: { slidesPerView: 5 },
+        },
+      });
+
+      window.addEventListener("scroll", function () {
+        var navbar = document.getElementById("mainNavbar");
+        if (window.scrollY > 50) {
+          navbar.classList.add("scrolled");
+        } else {
+          navbar.classList.remove("scrolled");
+        }
+      });
+    </script>
+  </body>
+</html>
